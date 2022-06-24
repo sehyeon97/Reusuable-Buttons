@@ -1,24 +1,62 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Style from './stylesheet/Style';
+import Button from './components/Button';
+
+const DefaultButton = {
+  width: '200px',
+  height: '150px',
+  borderRadius: '8px',
+  border: '1px solid black',
+  backgroundColor: 'cornflowerblue',
+  color: 'black'
+}
+
+const OutlineButton = {
+  border: '3px solid black',
+  backgroundColor: 'white',
+  color: 'black',
+  width: '200px',
+  height: '150px',
+  borderRadius: '8px'
+}
+
+const TextButton = {
+  border: 'none',
+  backgroundColor: 'white',
+  color: 'black',
+  width: '200px',
+  height: '150px',
+  borderRadius: '8px'
+}
+
+// For on and off buttons such as box shadow on / off,
+// two states must be provided to button
+const BoxShadowOnButton = {
+  width: '200px',
+  height: '150px',
+  boxShadow: '8px 16px red'
+}
+
+const BoxShadowOffButton = {
+  width: '200px',
+  height: '150px',
+  boxShadow: '0px 0px white'
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={Style.container}>
+      <div style={Style.div}>
+        <Button state={DefaultButton}/>
+      </div>
+      <div style={Style.div}>
+        <Button state={OutlineButton}/>
+      </div>
+      <div style={Style.div}>
+        <Button state={TextButton}/>
+      </div>
+      <div style={Style.div}>
+        <Button state={BoxShadowOnButton} alternativeState={BoxShadowOffButton} boxshadow={true}/>
+      </div>
     </div>
   );
 }

@@ -8,20 +8,6 @@ const styles = {
     div: {
         margin: '10px',
         padding: '20px'
-    },
-
-    enableButton: {
-        width: '200px',
-        height: '150px',
-        opacity: 1.0,
-        cursor: 'default'
-    },
-
-    disableButton: {
-        width: '200px',
-        height: '150px',
-        opacity: 0.6,
-        cursor: 'not-allowed'
     }
 };
 

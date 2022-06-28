@@ -1,27 +1,6 @@
 import Style from './stylesheet/Style';
 import Button from './components/Button';
 
-const DefaultButton = {
-  border: '1px solid black',
-  borderRadius: '8px',
-  backgroundColor: 'cornflowerblue',
-  color: 'black'
-}
-
-const OutlineButton = {
-  border: '3px solid black',
-  borderRadius: '8px',
-  backgroundColor: 'white',
-  color: 'black'
-}
-
-const TextButton = {
-  border: 'none',
-  borderRadius: '8px',
-  backgroundColor: 'white',
-  color: 'black'
-}
-
 const BoxShadowOnButton = {
   boxShadow: '8px 16px red'
 }
@@ -44,16 +23,16 @@ function App() {
   return (
     <div style={Style.container}>
       <div style={Style.div}>
-        <Button variant="default" size="default"/>
+        <Button variant="default" size="default" color='blue'/>
       </div>
       <div style={Style.div}>
-        <Button variant="outline" size="large"/>
+        <Button variant="outline" size="large" backgroundColor='orange'/>
       </div>
       <div style={Style.div}>
-        <Button variant="text" size="small"/>
+        <Button variant="text" size="small" color='red' backgroundColor='cornflowerblue'/>
       </div>
       <div style={Style.div}>
-        <Button boxshadow size="default"/>
+        <Button boxshadow/>
       </div>
       <div style={Style.div}>
         <Button size="default"/>

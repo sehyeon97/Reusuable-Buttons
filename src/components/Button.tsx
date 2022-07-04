@@ -1,5 +1,5 @@
-// Enable / disable button by using cursor and opacity
 
+// Enable / disable button by using cursor and opacity
 interface Styles {
     variant?: string,
     boxshadow?: string,
@@ -7,7 +7,9 @@ interface Styles {
     color?: string,
     backgroundColor?: string,
     cursor?: string,
-    opacity?: number
+    opacity?: number,
+    icon?: string,
+    iconPos?: string
 }
 
 const Button = (attributes: Styles) => {
@@ -18,6 +20,8 @@ const Button = (attributes: Styles) => {
     let backgroundColor = attributes.backgroundColor;
     let cursor = attributes.cursor;
     let opacity = attributes.opacity;
+    let icon = attributes.icon;
+    let iconPos = attributes.iconPos;
 
     const StyledVariant = getVariant(variant);
 
@@ -45,11 +49,21 @@ const Button = (attributes: Styles) => {
         backgroundColor: StyledBackgroundColor.backgroundColor,
         boxShadow: StyledBoxShadow.boxShadow,
         cursor: StyledCursor.cursor,
-        opacity: StyledOpacity.opacity
+        opacity: StyledOpacity.opacity,
+    }
+
+    if (icon) {
+        return (<>
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+                rel="stylesheet"></link>
+            <button type='button' style={StyledButton}>
+                <span className="material-icons">{icon}</span>
+            </button>
+        </>)
     }
 
     return (
-        <button type='button' style={StyledButton}>button</button>
+        <button type="button" style={StyledButton}>button</button>
     );
 }
 

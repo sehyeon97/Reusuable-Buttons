@@ -5,13 +5,13 @@ function App() {
   return (
     <div style={Style.container}>
       <div style={Style.div}>
-        <Button variant="default" size="default" color='blue' cursor='not-allowed' opacity={1}/>
+        <Button variant="default" size="default" color='blue' cursor='not-allowed' opacity={1} icon='search'/>
       </div>
       <div style={Style.div}>
-        <Button variant="outline" size="large" backgroundColor='orange' cursor='default' opacity={0.4}/>
+        <Button variant="outline" size="large" backgroundColor='orange' cursor='default' opacity={0.4} icon='done' iconPos='right'/>
       </div>
       <div style={Style.div}>
-        <Button variant="text" size="small" color='red' backgroundColor='cornflowerblue'/>
+        <Button variant="text" size="small" color='red' backgroundColor='cornflowerblue' icon='add' iconPos='left'/>
       </div>
       <div style={Style.div}>
         <Button boxshadow='24px 24px blue'/>
